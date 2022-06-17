@@ -10,23 +10,24 @@
 	<h1>전화번호부</h1>
 	<h2>리스트</h2>
 	
-	<c:forEach items="${pList}" var="pList">
+	<c:forEach items="${personList}" var="personList">
 		<table border='1'>
 			<tr>
 				<td>이름(name)</td>
-				<td>${pList.name}</td>
+				<td>${personList.name}</td>
 			<tr>
 			<tr>
 				<td>핸드폰(hp)</td>
-				<td>${pList.hp }</td>
+				<td>${personList.hp }</td>
 			<tr>
 			<tr>
 				<td>회사(company)</td>
-				<td>${pList.company }</td>
+				<td>${personList.company }</td>
 			<tr>
 			<tr>
-				<td><a href="/phonebook4/updateForm?personId=${pList.personId}">[수정폼]</a></td>
-				<td><a href="/phonebook4/delete?personId=${pList.personId}">삭제</a></td>
+				<td><a href="/phonebook4/updateForm?no=${personList.personId}">[수정폼]</a></td>
+				<td><a href="/phonebook4/updateForm2?no=${personList.personId}">[수정폼2]</a></td>
+				<td><a href="/phonebook4/delete?no=${personList.personId}">삭제</a></td>
 			<tr>
 		</table>
 		<br>
